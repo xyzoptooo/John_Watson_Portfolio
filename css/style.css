@@ -162,6 +162,23 @@ a {
 /* Hero Section */
 .hero {
   padding: 100px 0;
+  position: relative;
+  z-index: 0;
+  background-image: url('https://images.pexels.com/photos/5185156/pexels-photo-5185156.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 25, 49, 0.465); /* darker transparent navy blue */
+  z-index: -1;
 }
 
 .hero-container {
@@ -180,7 +197,7 @@ a {
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 15px;
-  color: #038365;
+  color: #ffffff;
 }
 
 .hero-content h1 {
